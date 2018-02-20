@@ -25,20 +25,20 @@
                         <div class="box-header with-border">
                             <h3 class="box-title">Submit New Add</h3>
                         </div>
+
                                 <!-- /.box-header -->
                         <!-- form start -->
-                        <form role="form" action="{{ route('post.update', $post->id) }}" method="post">
+                        <form role="form" action="{{ route('post.store') }}" method="post">
                             {{ csrf_field() }}
-                            {{ method_field('PUT') }}
                             <div class="box-body">
                                 <div class="col-lg-offset-3 col-lg-6">
 
                                     <div class="form-group">
                                         <label for="CategoryTitle">Category title</label>
-                                        <input type="text" name="title" class="form-control" id="CategoryTitle" value="{{ $post->title }}">
+                                        <input type="text" name="title" class="form-control" id="CategoryTitle" placeholder="type Category title">
                                         <br>
-                                        <label for="cat">Slug Url</label>
-                                        <input type="text" name="slug" id="slug" class="form-control" value="{{ $post->slug }}">
+                                        <label for="cat">Descriptions</label>
+                                        <input type="text" name="slug" id="slug" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary">Submit</button>
